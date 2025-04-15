@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
+import { OptionHoverHighlightDirective } from './directives/option-hover-highlight/option-hover-highlight.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OptionHoverHighlightDirective
   ],
   imports: [
     BrowserModule,

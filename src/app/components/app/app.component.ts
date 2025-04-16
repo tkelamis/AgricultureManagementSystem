@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'AgricultureManagementSystem';
 
   userNameSignedIn?: string;
+  jobsMenuOpen = false;
   
 
 
@@ -24,6 +25,10 @@ export class AppComponent implements OnInit {
     this.userNameSignedIn = 'Kelamis'
   }
 
+  backFromJobsMenu(){
+    this.jobsMenuOpen= !this.jobsMenuOpen;
+    
+  }
 
   //ng Class example
  

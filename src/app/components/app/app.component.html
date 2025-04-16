@@ -5,12 +5,25 @@
     </div>
     <div class="left-options-main-page-container">
         <div class="app-left-options-list-container">
-            <ul class="app-left-options-list">
-                <li appOptionHoverHighlight routerLink="">Dashboard</li>
-                <li appOptionHoverHighlight>Χτήματα</li>
-                <li appOptionHoverHighlight routerLink="jobs">Δουλειές</li>
-                <li appOptionHoverHighlight routerLink="profitEstimate">Εκτίμηση Κέρδους</li>
-            </ul>
+
+            <ng-container *ngIf="!jobsMenuOpen">
+                <ul class="app-left-options-list">
+                    <li appOptionHoverHighlight routerLink="">Dashboard</li>
+                    <li appOptionHoverHighlight>Χτήματα</li>
+                    <li appOptionHoverHighlight (click)="jobsMenuOpen = !jobsMenuOpen">Δουλειές   &gt;</li>
+                    <li appOptionHoverHighlight routerLink="profitEstimate">Εκτίμηση Κέρδους</li>
+                </ul>
+            </ng-container>
+
+            <ng-container *ngIf="jobsMenuOpen">
+                <ul class="app-left-options-list">
+                    <li style="font-weight: bold; cursor: pointer; user-select:none" routerLink="" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
+                    <li appOptionHoverHighlight routerLink="jobs">Λεπτομέρειες</li>
+                    <li appOptionHoverHighlight>Κατηγορίες</li>
+                    <li appOptionHoverHighlight >Προσθήκη</li>
+                </ul>
+            </ng-container>
+            
         </div>
     
         <div class="selections-page">

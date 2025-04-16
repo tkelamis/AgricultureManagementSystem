@@ -3,4 +3,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 app-profit-estimate {
     flex-grow: 1;
     width: 100%;
-  }
+} 
+
+app-jobs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+app-pruning{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+app-irrigation{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

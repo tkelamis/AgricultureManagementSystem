@@ -1,0 +1,18 @@
+.pruning-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d5ffcd;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.image{
+    width: 400px;
+    height: 400px;
+    background-image: url(/images/pruning-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+}

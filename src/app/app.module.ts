@@ -7,6 +7,7 @@ import { OptionHoverHighlightDirective } from './directives/option-hover-highlig
 import { ProfitEstimateComponent } from './components/profit-estimate/profit-estimate.component';
 import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-messages.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(withEventReplay())

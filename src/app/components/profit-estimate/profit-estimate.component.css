@@ -1,0 +1,59 @@
+.profit-estimate-container{
+    display: flex;
+    width: 100%;
+    background-color: aqua;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-farm-container{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(147 173 94);
+    border-radius: 29px;
+}
+
+.filter-section {
+    display: flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    gap: 1rem;
+  }
+  
+  .custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    gap: 8px;
+    user-select: none;
+  }
+  
+  .custom-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox:hover {
+    color: #2e7d32;
+  }
+
+
+.farm-dropdown {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #f0fff4;
+    color: #333;
+    width: 200px;
+    margin-top: 10px;
+  }

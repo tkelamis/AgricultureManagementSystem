@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Farm } from '../../objects/farm';
+import { FarmService } from '../../services/farm.service';
 
 @Component({
   selector: 'app-profit-estimate',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './profit-estimate.component.css'
 })
 export class ProfitEstimateComponent implements OnInit {
+  farm?: Farm;
+  farms: Farm[] = [];
+  showEarly = false;
+  showLate = false;
+
+  constructor(private farmManager:FarmService){
+    this.farms = this.farmManager.farms;
+  }
 
   ngOnInit(): void {
-    console.log('Im loaded')
   }
 
 }

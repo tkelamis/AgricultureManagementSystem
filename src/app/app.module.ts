@@ -8,6 +8,9 @@ import { ProfitEstimateComponent } from './components/profit-estimate/profit-est
 import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-messages.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { JobsComponent } from './components/jobs/jobs.component';
+import { PruningComponent } from './components/jobs/pruning/pruning.component';
+import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { FormsModule } from '@angular/forms';
     OptionHoverHighlightDirective,
     ProfitEstimateComponent,
     WelcomeMessagesComponent,
+    JobsComponent,
+    PruningComponent,
+    IrrigationComponent,
   ],
   imports: [
     BrowserModule,

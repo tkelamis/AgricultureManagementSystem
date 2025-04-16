@@ -1,0 +1,8 @@
+<div class="job-option-container">
+    <div class="job-option" *ngFor="let job of jobs" appOptionHoverHighlight (click)="getJobType(job)"> {{job.type}}</div>
+</div>
+
+<div [ngSwitch]="selectedJob?.type">
+    <app-pruning *ngSwitchCase="jobType.Prunning" [job]="selectedJob"></app-pruning>
+    <app-irrigation *ngSwitchCase="jobType.Irrigation" [job]="selectedJob"></app-irrigation>
+</div>

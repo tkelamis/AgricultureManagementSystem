@@ -1,0 +1,17 @@
+<div *ngIf="!userSignedIn; then thenBlock else elseBlock"></div>
+            
+            <ng-template #thenBlock>
+                <div>Welcome to the Argicultular Management System.<br> <br>First, please sign in or sign up</div>
+            </ng-template>
+
+            <ng-template #elseBlock>
+                <div [ngClass]="currentClasses">
+                    🌾 Welcome back, {{userSignedIn}}!
+                <br>
+                    {{welcomeMessage}}
+                </div>
+            </ng-template>
+
+            <!-- <ng-template select let-data [selectFrom]="fruit">
+                <p>The fruit is: {{ data }}</p>
+            </ng-template> -->

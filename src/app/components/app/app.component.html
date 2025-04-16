@@ -6,9 +6,9 @@
     <div class="left-options-main-page-container">
         <div class="app-left-options-list-container">
             <ul class="app-left-options-list">
-                <li appOptionHoverHighlight>Dashboard</li>
+                <li appOptionHoverHighlight routerLink="">Dashboard</li>
                 <li appOptionHoverHighlight>Χτήματα</li>
-                <li appOptionHoverHighlight>Δουλειές</li>
+                <li appOptionHoverHighlight routerLink="profitEstimate">Δουλειές</li>
                 <li appOptionHoverHighlight>sjinb</li>
                 <li appOptionHoverHighlight>sjinb</li>
             </ul>
@@ -16,23 +16,8 @@
     
         <div class="selections-page">
 
-            <div *ngIf="!userNameSignedIn; then thenBlock else elseBlock"></div>
-            
-            <ng-template #thenBlock>
-                <div>Welcome to the Argicultular Management System.<br> <br>First, please sign in or sign up</div>
-            </ng-template>
+            <router-outlet></router-outlet>
 
-            <ng-template #elseBlock>
-                <div [ngClass]="currentClasses">
-                    🌾 Welcome back, {{userNameSignedIn}}!
-                <br>
-                    {{welcomeMessage}}
-                </div>
-            </ng-template>
-
-            <!-- <ng-template select let-data [selectFrom]="fruit">
-                <p>The fruit is: {{ data }}</p>
-            </ng-template> -->
         </div>
 
     </div>

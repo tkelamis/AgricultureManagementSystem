@@ -46,6 +46,8 @@
 }
 
 .selections-page{
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: calc(100vh - 80px);
     margin-right: 3%;
@@ -54,3 +56,26 @@
     background-color: white;
     padding: 3rem;
 }
+
+.admin-style {
+    height: fit-content;
+    background-color: #fff3cd;
+    border-left: 5px solid orange;
+    padding: 1rem;
+    font-weight: bold;
+  }
+  
+  .first-visit-style {
+    height: fit-content;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 1rem;
+    border-left: 5px solid teal;
+  }
+  
+  .returning-user-style {
+    height: fit-content;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-left: 5px solid #aaa;
+  }

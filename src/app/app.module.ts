@@ -11,8 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { PruningComponent } from './components/jobs/pruning/pruning.component';
 import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
-import { FadeInDirective } from './fade-in.directive';
-import { FadeInWrapperComponent } from './fade-in-wrapper/fade-in-wrapper.component';
+import { FadeInDirective } from './directives/fade-in.directive';
+import { PracticeComponent } from './practice/practice.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { FadeInWrapperComponent } from './fade-in-wrapper/fade-in-wrapper.compon
     PruningComponent,
     IrrigationComponent,
     FadeInDirective,
-    FadeInWrapperComponent,
+    PracticeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule 
   ],
   providers: [
     provideClientHydration(withEventReplay())

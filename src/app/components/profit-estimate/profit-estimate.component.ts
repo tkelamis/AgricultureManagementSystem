@@ -18,7 +18,7 @@ export class ProfitEstimateComponent implements OnInit {
     this.farms = this.farmManager.farms;
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

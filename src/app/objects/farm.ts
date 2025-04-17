@@ -1,6 +1,7 @@
 export interface Farm {
     name: string;
-    readyForCropping: DueDate
+    periodOfCropping: DueDate;
+    sizeInStremmata: number;
 }
 
 export enum DueDate{

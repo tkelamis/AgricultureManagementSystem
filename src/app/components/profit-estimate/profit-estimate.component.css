@@ -1,7 +1,6 @@
 .profit-estimate-container{
     display: flex;
     width: 100%;
-    background-color: aqua;
     flex-direction: column;
     justify-content: center;
     align-items: center;

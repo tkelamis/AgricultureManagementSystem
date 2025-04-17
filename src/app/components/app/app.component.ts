@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  trigger,
+  transition,
+  style,
+  animate
+} from '@angular/animations';
 
 @Component({
   selector: 'app-root',

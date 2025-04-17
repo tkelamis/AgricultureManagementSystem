@@ -12,6 +12,7 @@
                     <li appOptionHoverHighlight>Χτήματα</li>
                     <li appOptionHoverHighlight (click)="jobsMenuOpen = !jobsMenuOpen">Δουλειές   &gt;</li>
                     <li appOptionHoverHighlight routerLink="profitEstimate">Εκτίμηση Κέρδους</li>
+                    <li appOptionHoverHighlight routerLink="practice">Εξάσκηση</li>
                 </ul>
             </ng-container>
 
@@ -27,11 +28,7 @@
         </div>
     
         <div class="selections-page">
-            <div appFadeIn>
-                <app-fade-in-wrapper></app-fade-in-wrapper>
-                
-            </div>
-
+            <router-outlet></router-outlet>
         </div>
 
     </div>

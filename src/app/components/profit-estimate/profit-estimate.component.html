@@ -16,8 +16,8 @@
         <select class="farm-dropdown" [(ngModel)]="farm">
             <ng-container *ngFor="let f of farms">
                 <ng-container *ngIf="(!showEarly && !showLate)||
-                                    (showEarly && f.readyForCropping == 'Early') ||
-                                    (showLate && f.readyForCropping == 'In Time')">
+                                    (showEarly && f.periodOfCropping == 'Early') ||
+                                    (showLate && f.periodOfCropping == 'In Time')">
                     <option [ngValue]="f">{{f.name}}</option>
                 </ng-container>
             </ng-container>

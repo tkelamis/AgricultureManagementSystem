@@ -7,7 +7,7 @@
         <div class="app-left-options-list-container">
 
             <ng-container *ngIf="!jobsMenuOpen">
-                <ul class="app-left-options-list">
+                <ul appFadeIn class="app-left-options-list">
                     <li appOptionHoverHighlight routerLink="">Dashboard</li>
                     <li appOptionHoverHighlight>Χτήματα</li>
                     <li appOptionHoverHighlight (click)="jobsMenuOpen = !jobsMenuOpen">Δουλειές   &gt;</li>
@@ -16,8 +16,8 @@
             </ng-container>
 
             <ng-container *ngIf="jobsMenuOpen">
-                <ul class="app-left-options-list">
-                    <li style="font-weight: bold; cursor: pointer; user-select:none" routerLink="" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
+                <ul appFadeIn class="app-left-options-list">
+                    <li style="font-weight: bold; cursor: pointer; user-select:none" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
                     <li appOptionHoverHighlight routerLink="jobs">Λεπτομέρειες</li>
                     <li appOptionHoverHighlight>Κατηγορίες</li>
                     <li appOptionHoverHighlight >Προσθήκη</li>
@@ -27,8 +27,10 @@
         </div>
     
         <div class="selections-page">
-
-            <router-outlet></router-outlet>
+            <div appFadeIn>
+                <app-fade-in-wrapper></app-fade-in-wrapper>
+                
+            </div>
 
         </div>
 

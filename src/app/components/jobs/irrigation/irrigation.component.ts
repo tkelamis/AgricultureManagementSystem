@@ -8,5 +8,8 @@ import { Job } from '../../../objects/job';
   styleUrl: './irrigation.component.css'
 })
 export class IrrigationComponent {
-  @Input({required:true}) job?: Partial<Job>;
+  @Input() job?: Partial<Job>;
+
+
+  
 }

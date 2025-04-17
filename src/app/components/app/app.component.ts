@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit {
   
 
 
-  constructor(){}
+  constructor(private router: Router){}
 
   ngOnInit(): void {
     this.signInUser();
@@ -25,12 +26,11 @@ export class AppComponent implements OnInit {
     this.userNameSignedIn = 'Kelamis'
   }
 
-  backFromJobsMenu(){
-    this.jobsMenuOpen= !this.jobsMenuOpen;
-    
-  }
-
-  //ng Class example
- 
+  backFromJobsMenu() {
+    this.jobsMenuOpen = false;
   
+    setTimeout(() => {
+      this.router.navigate(['']);
+    }, 300);
+  }
 }

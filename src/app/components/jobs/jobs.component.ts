@@ -12,6 +12,7 @@ export class JobsComponent {
   jobs?: Partial<Job>[];
   selectedJob?: Partial<Job>;
   jobType = JobType;
+  openIrrigiation = true;
 
   constructor(private jobManager:JobsService){
     this.jobs = jobManager.jobs

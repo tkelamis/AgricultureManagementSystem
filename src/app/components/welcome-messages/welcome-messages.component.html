@@ -1,11 +1,11 @@
 <div *ngIf="!userSignedIn; then thenBlock else elseBlock"></div>
             
             <ng-template #thenBlock>
-                <div>Welcome to the Argicultular Management System.<br> <br>First, please sign in or sign up</div>
+                <div appFadeIn >Welcome to the Argicultular Management System.<br> <br>First, please sign in or sign up</div>
             </ng-template>
 
             <ng-template #elseBlock>
-                <div [ngClass]="currentClasses">
+                <div appFadeIn [ngClass]="currentClasses">
                     🌾 Welcome back, {{userSignedIn}}!
                 <br>
                     {{welcomeMessage}}

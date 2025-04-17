@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { PruningComponent } from './components/jobs/pruning/pruning.component';
 import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
+import { FadeInDirective } from './fade-in.directive';
+import { FadeInWrapperComponent } from './fade-in-wrapper/fade-in-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { IrrigationComponent } from './components/jobs/irrigation/irrigation.com
     JobsComponent,
     PruningComponent,
     IrrigationComponent,
+    FadeInDirective,
+    FadeInWrapperComponent,
   ],
   imports: [
     BrowserModule,

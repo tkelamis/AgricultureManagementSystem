@@ -10,8 +10,10 @@ import { DueDate, Farm } from '../objects/farm';
   styleUrl: './practice.component.css'
 })
 export class PracticeComponent{
-  
-  //example of Loading data with async pipe
+
+
+
+            //EXAMPLE of Loading data with async pipe
   // newFarms:BehaviorSubject<Farm[]|null> = new BehaviorSubject<Farm[]| null>(null);
     
 
@@ -32,12 +34,30 @@ export class PracticeComponent{
   //   },8000);
   // }
 
-  // currency pipe example
+            // EXAMPLE currency pipe
   // a: number = 0.259;
   // b: number = 1.3495;
 
 
+            // EXAMPLE i18nPlural
+  // messages:string[] = [
+  //   "hello"
+  // ];
+  // messageMapping: { [count: string]: string; } = {
+  //   '=0': 'No messages',
+  //   '=1': 'message',
+  //   'other': 'messages'
+  // }
 
+          //EXAMPLE i18nSelect
+  // gender = 'male';
 
+  // inviteMap = { 'male': 'fuck off', 'female': 'invite her', 'other': 'invite them' };
+
+  
+          //EXAMPLE KeyValuePipe
+  //farm: Farm = { name: 'karantza', periodOfCropping: DueDate.InTime, sizeInStremmata: 4 };
+  
+  
   
 }

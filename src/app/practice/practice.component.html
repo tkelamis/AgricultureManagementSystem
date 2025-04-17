@@ -1,4 +1,4 @@
-<!-- example of Loading data with async pipe -->
+        <!-- EXAMPLE of Loading data with async pipe -->
 <!-- <div *ngIf="newFarms|async as farms; else loading">
     <h2>Farm List:</h2>
     <ul>
@@ -13,7 +13,7 @@
     <p>Loading farm data....</p>
 </ng-template> -->
 
-<!-- currency pipe -->
+        <!-- EXAMPLE currency pipe -->
 <!-- <div>
     <p>A: {{ a | currency }}</p>
     <p>A: {{ a | currency: 'CAD' : 'code' }}</p>
@@ -21,4 +21,17 @@
     <p>B: {{ b | currency: 'CAD' : 'symbol-narrow' : '4.2-2' }}</p>
     <p>B: {{ b | currency: 'CAD' : 'symbol' : '4.2-2' : 'fr' }}</p>
     <p>B: {{ b | currency: 'CLP' }}</p>
+</div> -->
+
+        <!-- EXAMPLE i18nPlural -->
+<!-- <h3>Inbox</h3>
+<p>{{messages.length}} {{messages.length | i18nPlural: messageMapping}} -->
+
+        <!-- EXAMPLE i18nSelect -->
+<!-- <div>{{gender| i18nSelect:inviteMap}} </div> -->
+
+
+        <!-- EXAMPLE KeyValuePipe -->
+<!-- <div *ngFor="let property of farm | keyvalue">
+    {{property.key}}:{{property.value}}
 </div> -->

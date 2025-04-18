@@ -13,6 +13,7 @@ import { PruningComponent } from './components/jobs/pruning/pruning.component';
 import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
 import { PracticeComponent } from './practice/practice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PruningComponent,
     IrrigationComponent,
     PracticeComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,22 +6,22 @@
     <div class="left-options-main-page-container">
         <div class="app-left-options-list-container">
 
-            <ng-container *ngIf="!jobsMenuOpen">
+            <ng-container *ngIf="urlHasMain()">
                 <ul [@slideInRight] class="app-left-options-list">
-                    <li appOptionHoverHighlight routerLink="">Dashboard</li>
-                    <li appOptionHoverHighlight>Χτήματα</li>
-                    <li appOptionHoverHighlight (click)="jobsMenuOpen = !jobsMenuOpen">Δουλειές   &gt;</li>
-                    <li appOptionHoverHighlight routerLink="profitEstimate">Εκτίμηση Κέρδους</li>
-                    <li appOptionHoverHighlight routerLink="practice">Εξάσκηση</li>
+                    <li appOptionHoverHighlight routerLink="" >Dashboard</li>
+                    <li appOptionHoverHighlight routerLink="main/**" routerLinkActive="active">Χτήματα</li>
+                    <li appOptionHoverHighlight routerLink="jobs" >Δουλειές   &gt;</li>
+                    <li appOptionHoverHighlight routerLink="main/profitEstimate" routerLinkActive="active" aria-current="page">Εκτίμηση Κέρδους</li>
+                    <li appOptionHoverHighlight routerLink="main/practice" routerLinkActive="active">Εξάσκηση</li>
                 </ul>
             </ng-container>
 
-            <ng-container *ngIf="jobsMenuOpen">
+            <ng-container *ngIf="urlHasJob()">
                 <ul [@slideInLeft] class="app-left-options-list">
-                    <li style="font-weight: bold; cursor: pointer; user-select:none" routerLink="" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
-                    <li appOptionHoverHighlight routerLink="jobs">Λεπτομέρειες</li>
-                    <li appOptionHoverHighlight>Κατηγορίες</li>
-                    <li appOptionHoverHighlight >Προσθήκη</li>
+                    <li appOptionHoverHighlight style="font-weight: bold" routerLink="">&lt; Κλείσιμο</li>
+                    <li appOptionHoverHighlight routerLink="jobs/options" routerLinkActive="active">Περιγραφή</li>
+                    <li appOptionHoverHighlight  routerLink="**">Κατηγορίες</li>
+                    <li appOptionHoverHighlight  routerLink="**">Προσθήκη</li>
                 </ul>
             </ng-container>
             

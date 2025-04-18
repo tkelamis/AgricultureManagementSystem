@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { fadeIn } from '../../shared/animations';
 import { slideInLeft } from '../../shared/slideFromLeft';
 import { slideInRight } from '../../shared/slideFromRight';
+import { RouteService } from '../../services/route.service';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,10 @@ export class AppComponent implements OnInit {
   title = 'AgricultureManagementSystem';
 
   userNameSignedIn?: string;
-  jobsMenuOpen = false;
   
 
 
-  constructor(private router: Router){}
+  constructor(private routerManager: RouteService){}
 
   ngOnInit(): void {
     this.signInUser();
@@ -30,11 +30,12 @@ export class AppComponent implements OnInit {
     this.userNameSignedIn = 'Kelamis'
   }
 
-  backFromJobsMenu() {
-    this.jobsMenuOpen = false;
-  
-    // setTimeout(() => {
-    //   this.router.navigate(['']);
-    // }, 300);
+  urlHasJob():boolean{
+    return this.routerManager.urlHasJob();
   }
+
+  urlHasMain():boolean{
+    return this.routerManager.urlHasMain();
+  }
+
 }

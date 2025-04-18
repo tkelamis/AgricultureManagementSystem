@@ -1,0 +1,31 @@
+.page-not-found-container {
+    text-align: center;
+    padding: 3rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .page-not-found-container h1 {
+    font-size: 2.5rem;  /* Smaller font size */
+    margin-bottom: 0.75rem;
+  }
+  
+  .page-not-found-container p {
+    font-size: 1rem;  /* Smaller font size */
+    margin-bottom: 1.5rem;
+  }
+  
+  .back-home {
+    display: inline-block;
+    padding: 0.4rem 1rem;  /* Smaller padding */
+    background-color: #3f51b5;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;  /* Slightly smaller border radius */
+    font-size: 0.9rem;  /* Smaller font size */
+  }
+  
+  .back-home:hover {
+    background-color: #303f9f;
+  }
+  

@@ -1,5 +1,5 @@
-<div class="job-option-container">
-    <div appFadeIn class="job-option" *ngFor="let job of jobs" appOptionHoverHighlight (click)="getJobType(job)"> {{job.type}}</div>
+<div [@fadeIn] class="job-option-container">
+    <div class="job-option" *ngFor="let job of jobs" appOptionHoverHighlight (click)="getJobType(job)"> {{job.type}}</div>
 </div>
 
 <div [ngSwitch]="selectedJob?.type">

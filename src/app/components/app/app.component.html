@@ -1,13 +1,13 @@
 <div style="background-color: #f5fff7;">
 
-    <div class="app-top-bar-container">
+    <div [@fadeIn] class="app-top-bar-container">
         <div class="app-logo-container"></div>
     </div>
     <div class="left-options-main-page-container">
         <div class="app-left-options-list-container">
 
             <ng-container *ngIf="!jobsMenuOpen">
-                <ul appFadeIn class="app-left-options-list">
+                <ul [@slideInRight] class="app-left-options-list">
                     <li appOptionHoverHighlight routerLink="">Dashboard</li>
                     <li appOptionHoverHighlight>Χτήματα</li>
                     <li appOptionHoverHighlight (click)="jobsMenuOpen = !jobsMenuOpen">Δουλειές   &gt;</li>
@@ -17,8 +17,8 @@
             </ng-container>
 
             <ng-container *ngIf="jobsMenuOpen">
-                <ul appFadeIn class="app-left-options-list">
-                    <li style="font-weight: bold; cursor: pointer; user-select:none" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
+                <ul [@slideInLeft] class="app-left-options-list">
+                    <li style="font-weight: bold; cursor: pointer; user-select:none" routerLink="" (click)="backFromJobsMenu()">&lt; Κλείσιμο</li>
                     <li appOptionHoverHighlight routerLink="jobs">Λεπτομέρειες</li>
                     <li appOptionHoverHighlight>Κατηγορίες</li>
                     <li appOptionHoverHighlight >Προσθήκη</li>

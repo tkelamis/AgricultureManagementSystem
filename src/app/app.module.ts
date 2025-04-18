@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './components/jobs/jobs.component';
 import { PruningComponent } from './components/jobs/pruning/pruning.component';
 import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
-import { FadeInDirective } from './directives/fade-in.directive';
 import { PracticeComponent } from './practice/practice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -24,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JobsComponent,
     PruningComponent,
     IrrigationComponent,
-    FadeInDirective,
     PracticeComponent,
   ],
   imports: [

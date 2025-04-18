@@ -6,7 +6,8 @@ import { JobsComponent } from './components/jobs/jobs.component';
 import { PracticeComponent } from './practice/practice.component';
 
 const routes: Routes = [
-  { path:'', component: WelcomeMessagesComponent },
+  { path:'',redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: WelcomeMessagesComponent },
   { path: 'profitEstimate', component: ProfitEstimateComponent },
   { path: 'jobs', component: JobsComponent },
   { path: 'practice', component: PracticeComponent }

@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Job, JobType } from '../../objects/job';
 import { JobsService } from '../../services/jobs.service';
+import { fadeIn } from '../../shared/animations';
 
 @Component({
   selector: 'app-jobs',
   standalone: false,
   templateUrl: './jobs.component.html',
-  styleUrl: './jobs.component.css'
+  styleUrl: './jobs.component.css',
+  animations: [fadeIn]
 })
 export class JobsComponent {
   jobs?: Partial<Job>[];

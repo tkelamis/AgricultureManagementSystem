@@ -20,7 +20,9 @@ export class FarmService {
   constructor() { 
     this.farms = [
       {name:"Καρατζάς", sizeInStremmata: 3,periodOfCropping:DueDate.Early},
-      {name: "Ραλλύ Κατσίκας", sizeInStremmata: 3, periodOfCropping:DueDate.Early}
+      {name: "Ραλλύ Κατσίκας", sizeInStremmata: 3, periodOfCropping:DueDate.InTime},
+      {name: "χτήμα 3", sizeInStremmata: 3, periodOfCropping:DueDate.InTime},
+      {name: "χτήμα 4", sizeInStremmata: 3, periodOfCropping:DueDate.Early}
     ]
   }
 

@@ -1,11 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { fadeIn } from '../../shared/animations';
 
 @Component({
   selector: 'app-welcome-messages',
   standalone: false,
   templateUrl: './welcome-messages.component.html',
-  styleUrl: './welcome-messages.component.css'
+  styleUrl: './welcome-messages.component.css',
+  animations: [fadeIn]
 })
 export class WelcomeMessagesComponent implements OnInit {
   welcomeMessage = '';

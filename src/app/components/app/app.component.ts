@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {
-  trigger,
-  transition,
-  style,
-  animate
-} from '@angular/animations';
+import { fadeIn } from '../../shared/animations';
+import { slideInLeft } from '../../shared/slideFromLeft';
+import { slideInRight } from '../../shared/slideFromRight';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  animations: [fadeIn, slideInLeft, slideInRight]
 })
 export class AppComponent implements OnInit {
   
@@ -35,8 +33,8 @@ export class AppComponent implements OnInit {
   backFromJobsMenu() {
     this.jobsMenuOpen = false;
   
-    setTimeout(() => {
-      this.router.navigate(['']);
-    }, 300);
+    // setTimeout(() => {
+    //   this.router.navigate(['']);
+    // }, 300);
   }
 }

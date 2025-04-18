@@ -1,5 +1,5 @@
         <!-- EXAMPLE of Loading data with async pipe -->
-<!-- <div *ngIf="newFarms|async as farms; else loading">
+<div *ngIf="newFarms|async as farms; else loading">
     <h2>Farm List:</h2>
     <ul>
         <li *ngFor="let farm of farms">
@@ -11,7 +11,7 @@
 
 <ng-template #loading>
     <p>Loading farm data....</p>
-</ng-template> -->
+</ng-template>
 
         <!-- EXAMPLE currency pipe -->
 <!-- <div>
@@ -21,9 +21,9 @@
     <p>B: {{ b | currency: 'CAD' : 'symbol-narrow' : '4.2-2' }}</p>
     <p>B: {{ b | currency: 'CAD' : 'symbol' : '4.2-2' : 'fr' }}</p>
     <p>B: {{ b | currency: 'CLP' }}</p>
-</div> -->
+</div>
 
-        <!-- EXAMPLE i18nPlural -->
+        <-- EXAMPLE i18nPlural -->
 <!-- <h3>Inbox</h3>
 <p>{{messages.length}} {{messages.length | i18nPlural: messageMapping}} -->
 

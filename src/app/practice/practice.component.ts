@@ -14,25 +14,25 @@ export class PracticeComponent{
 
 
             //EXAMPLE of Loading data with async pipe
-  // newFarms:BehaviorSubject<Farm[]|null> = new BehaviorSubject<Farm[]| null>(null);
+  newFarms:BehaviorSubject<Farm[]|null> = new BehaviorSubject<Farm[]| null>(null);
     
 
-  // ngOnInit(){
+  ngOnInit(){
 
-  //   setTimeout(()=>{
-  //     this.newFarms.next([
-  //       { name: 'Νέο Χτήμα', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
-  //       { name: 'Παλιά Φάρμα', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
-  //     ]);
-  //   },4000);
+    setTimeout(()=>{
+      this.newFarms.next([
+        { name: 'Νέο Χτήμα', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
+        { name: 'Παλιά Φάρμα', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
+      ]);
+    },4000);
 
-  //   setTimeout(()=>{
-  //   this.newFarms.next([
-  //     { name: 'asdas', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
-  //     { name: 'fgsdgsd', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
-  //   ]);
-  //   },8000);
-  // }
+    setTimeout(()=>{
+    this.newFarms.next([
+      { name: 'asdas', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
+      { name: 'fgsdgsd', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
+    ]);
+    },8000);
+  }
 
             // EXAMPLE currency pipe
   // a: number = 0.259;

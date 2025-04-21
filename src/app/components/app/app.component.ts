@@ -47,4 +47,8 @@ export class AppComponent implements OnInit {
   logRoute() {
     console.log('Navigating to:', this.router.url);
   }
+
+  navigateToProfit(){
+    this.routerManager.navigateToProfit();
+  }
 }

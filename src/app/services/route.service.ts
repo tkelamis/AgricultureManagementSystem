@@ -29,6 +29,10 @@ export class RouteService {
   routeObservable(){
     console.log(this.activatedRoute.url);
   }
+
+  navigateToProfit(){
+    this.router.navigate(['/profitEstimate'], { fragment: 'reviews' });
+  }
 }
 
 

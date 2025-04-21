@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from '../../../services/route.service';
 
@@ -10,14 +10,21 @@ import { RouteService } from '../../../services/route.service';
 })
 export class ProfitEstimateMainComponent implements OnInit {
 
-  constructor(private routerManager: RouteService, private activatedRoute: ActivatedRoute){}
+  constructor(private routerManager: RouteService, private activatedRoute: ActivatedRoute, private route:Router){}
 
   ngOnInit(){
-    //this.routerManager.showRouterState();
 
-    this.activatedRoute.data.subscribe(data => {
-      console.log(data);
+    this.activatedRoute.url.subscribe(url => {
+      console.log(url)
     })
-  }
+
+    this.activatedRoute.fragment.subscribe(fragment => {
+    console.log('Fragment is ', fragment);
+    })
+}
+
+navigateToProfit(){
+  this.routerManager.navigateToProfit();
+}
 
 }

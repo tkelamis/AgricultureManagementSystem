@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Job, JobType } from '../../objects/job';
 import { JobsService } from '../../services/jobs.service';
 import { fadeIn } from '../../shared/animations';
+import { RouteService } from '../../services/route.service';
 
 @Component({
   selector: 'app-jobs',
@@ -10,17 +11,11 @@ import { fadeIn } from '../../shared/animations';
   styleUrl: './jobs.component.css',
   animations: [fadeIn]
 })
-export class JobsComponent {
-  jobs?: Partial<Job>[];
-  selectedJob?: Partial<Job>;
-  jobType = JobType;
-  openIrrigiation = true;
+export class JobsComponent implements OnInit {
 
-  constructor(private jobManager:JobsService){
-    this.jobs = jobManager.jobs
-  }
+  constructor(private routeManager: RouteService){}
 
-  getJobType(job: Partial<Job>){
-    this.selectedJob = job;
+  ngOnInit(): void {
+    this.routeManager.routeObservable();
   }
 }

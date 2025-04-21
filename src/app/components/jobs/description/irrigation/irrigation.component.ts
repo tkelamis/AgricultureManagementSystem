@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Job } from '../../../objects/job';
-import { fadeIn } from '../../../shared/animations';
+import { fadeIn } from '../../../../shared/animations';
+import { Job } from '../../../../objects/job';
 
 @Component({
   selector: 'app-irrigation',

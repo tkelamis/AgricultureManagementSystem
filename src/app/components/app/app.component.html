@@ -11,17 +11,24 @@
                     <li appOptionHoverHighlight routerLink="" >Dashboard</li>
                     <li appOptionHoverHighlight routerLink="main/**" routerLinkActive="active">Χτήματα</li>
                     <li appOptionHoverHighlight routerLink="jobs" >Δουλειές   &gt;</li>
-                    <li appOptionHoverHighlight routerLink="main/profitEstimate" routerLinkActive="active" aria-current="page">Εκτίμηση Κέρδους</li>
+                    <li appOptionHoverHighlight routerLink="profitEstimate" aria-current="page">Εκτίμηση Κέρδους</li>
                     <li appOptionHoverHighlight routerLink="main/practice" routerLinkActive="active">Εξάσκηση</li>
                 </ul>
             </ng-container>
 
             <ng-container *ngIf="urlHasJob()">
                 <ul [@slideInLeft] class="app-left-options-list">
-                    <li appOptionHoverHighlight style="font-weight: bold" routerLink="">&lt; Κλείσιμο</li>
-                    <li appOptionHoverHighlight routerLink="jobs/options" routerLinkActive="active">Περιγραφή</li>
+                    <li appOptionHoverHighlight style="font-weight: bold" routerLink="" >&lt; Κλείσιμο</li>
+                    <li appOptionHoverHighlight routerLink="jobs/descriptions">Περιγραφή</li>
                     <li appOptionHoverHighlight  routerLink="**">Κατηγορίες</li>
                     <li appOptionHoverHighlight  routerLink="**">Προσθήκη</li>
+                </ul>
+            </ng-container>
+
+            <ng-container *ngIf="urlHasProfitEstimate()">
+                <ul [@slideInLeft] class="app-left-options-list">
+                    <li appOptionHoverHighlight style="font-weight: bold" routerLink="">&lt; Κλείσιμο</li>
+                    <li appOptionHoverHighlight routerLink="profitEstimate/descriptions">Περιγραφή</li>
                 </ul>
             </ng-container>
             

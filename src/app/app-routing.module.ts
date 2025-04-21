@@ -5,20 +5,20 @@ import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-
 import { JobsComponent } from './components/jobs/jobs.component';
 import { PracticeComponent } from './practice/practice.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { JobsDescriptionOptionComponent } from './components/jobs/description/jobs-description-option/jobs-description-option.component';
+import { ProfitEstimateMainComponent } from './components/profit-estimate/profit-estimate-main/profit-estimate-main.component';
 
 const routes: Routes = [
   {
-    path: '', // The empty path will match the root and redirect to 'main'
+    path: '',
     redirectTo: 'main', 
     pathMatch: 'full'
   },
-  { path: 'main', component: WelcomeMessagesComponent },
-  { path: 'main/profitEstimate', component: ProfitEstimateComponent },
-  { path: 'jobs',
-    children: [
-      { path: 'options', component: JobsComponent}
-    ]
-  },
+  { path: 'main', component: WelcomeMessagesComponent},
+  { path: 'profitEstimate', component: ProfitEstimateMainComponent, data: {title:'hy!!!!'}},
+  { path: 'profitEstimate/descriptions', component: ProfitEstimateComponent },
+  { path: 'jobs',component: JobsComponent },
+  { path: 'jobs/descriptions', component: JobsDescriptionOptionComponent },
   { path: 'main/practice', component: PracticeComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

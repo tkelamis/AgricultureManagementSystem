@@ -9,11 +9,13 @@ import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './components/jobs/jobs.component';
-import { PruningComponent } from './components/jobs/pruning/pruning.component';
-import { IrrigationComponent } from './components/jobs/irrigation/irrigation.component';
 import { PracticeComponent } from './practice/practice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { JobsDescriptionOptionComponent } from './components/jobs/description/jobs-description-option/jobs-description-option.component';
+import { PruningComponent } from './components/jobs/description/pruning/pruning.component';
+import { IrrigationComponent } from './components/jobs/description/irrigation/irrigation.component';
+import { ProfitEstimateMainComponent } from './components/profit-estimate/profit-estimate-main/profit-estimate-main.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     IrrigationComponent,
     PracticeComponent,
     PageNotFoundComponent,
+    JobsDescriptionOptionComponent,
+    ProfitEstimateMainComponent
   ],
   imports: [
     BrowserModule,

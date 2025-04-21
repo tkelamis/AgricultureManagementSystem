@@ -5,6 +5,12 @@ app-profit-estimate {
     width: 100% !important;
 } 
 
+app-jobs-description-option{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 app-jobs{
   display: flex;
   flex-direction: column;

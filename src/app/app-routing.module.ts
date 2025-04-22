@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'main', component: WelcomeMessagesComponent},
   { path: 'jobs',component: JobsComponent },
   { path: 'jobs/descriptions', component: JobsDescriptionOptionComponent, canDeactivate:[returnWithoutSaveGuard]  },
-  { path: 'jobs/addJob', component: JobsDescriptionOptionComponent, canDeactivate:[returnWithoutSaveGuard]  },
+  { path: 'jobs/addJob', component: AddJobComponent, canDeactivate:[returnWithoutSaveGuard]  },
   { path: 'profitEstimate', component: ProfitEstimateMainComponent, canActivate:[authGuard], data: {title:'hy!!!!'}},
   { path: 'profitEstimate/descriptions', component: ProfitEstimateComponent },
   { path: 'main/practice', component: AddJobComponent},

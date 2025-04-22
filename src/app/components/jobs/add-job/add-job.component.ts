@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { SaveChangesModalComponent } from '../../modals/save-changes-modal/save-changes-modal.component';
 
 @Component({
   selector: 'app-add-job',
@@ -7,17 +8,19 @@ import { Component } from '@angular/core';
   styleUrl: './add-job.component.css'
 })
 export class AddJobComponent {
-  jobs:string[] = []
 
-  ngAfterViewInit() {
+  @ViewChild(SaveChangesModalComponent) SaveChangesModal!: SaveChangesModalComponent;
+
+  private pendingResolve!: (value: boolean) => void;
+
+  canDeactivate(): Promise<boolean> {
+    return new Promise((resolve) => {
+      this.pendingResolve = resolve;
+      this.SaveChangesModal.open();
+    });
   }
 
-
-  addJob(){
-    const newJob = 'irrigation';
-    this.jobs.push(newJob);
-    console.log(this.jobs.forEach(element => {
-      console.log(element);
-    }))
+  onDecision(leave: boolean) {
+    this.pendingResolve(leave);
   }
 }

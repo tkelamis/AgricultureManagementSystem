@@ -16,6 +16,5 @@ export class JobsComponent implements OnInit {
   constructor(private routeManager: RouteService){}
 
   ngOnInit(): void {
-    this.routeManager.routeObservable();
   }
 }

@@ -10,6 +10,6 @@ export class UserService {
   isFirstVisit: boolean = true;
 
   constructor() { 
-    this.userName = 'kelamis';
+    this.userName = '';
   }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FarmService } from '../services/farm.service';
 import { BehaviorSubject } from 'rxjs';
 import { DueDate, Farm } from '../objects/farm';
+import { RouteService } from '../services/route.service';
 
 @Component({
   selector: 'app-practice',
@@ -11,11 +12,14 @@ import { DueDate, Farm } from '../objects/farm';
 })
 export class PracticeComponent{
 
+  constructor(private routerManager: RouteService){}
+
 
 
             //EXAMPLE of Loading data with async pipe
   newFarms:BehaviorSubject<Farm[]|null> = new BehaviorSubject<Farm[]| null>(null);
     
+
 
   ngOnInit(){
 
@@ -24,14 +28,14 @@ export class PracticeComponent{
         { name: 'Νέο Χτήμα', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
         { name: 'Παλιά Φάρμα', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
       ]);
-    },4000);
+    },1000);
 
     setTimeout(()=>{
     this.newFarms.next([
       { name: 'asdas', sizeInStremmata: 10, periodOfCropping:DueDate.Early },
       { name: 'fgsdgsd', sizeInStremmata: 8, periodOfCropping:DueDate.Early }
     ]);
-    },8000);
+    },1000);
   }
 
             // EXAMPLE currency pipe
@@ -57,7 +61,6 @@ export class PracticeComponent{
   
           //EXAMPLE KeyValuePipe
   //farm: Farm = { name: 'karantza', periodOfCropping: DueDate.InTime, sizeInStremmata: 4 };
-  
-  
+ 
   
 }

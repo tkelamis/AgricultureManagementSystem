@@ -17,19 +17,15 @@ export class AppComponent implements OnInit {
   
   title = 'AgricultureManagementSystem';
 
-  userNameSignedIn?: string;
   navigateTo: string = '';
+  loading = false;
+  
   
 
 
   constructor(private routerManager: RouteService, private router:Router){}
 
   ngOnInit(): void {
-    this.signInUser();
-  }
-
-  signInUser(){
-    this.userNameSignedIn = 'Kelamis'
   }
 
   urlHasJob():boolean{
@@ -46,9 +42,5 @@ export class AppComponent implements OnInit {
 
   logRoute() {
     console.log('Navigating to:', this.router.url);
-  }
-
-  navigateToProfit(){
-    this.routerManager.navigateToProfit();
   }
 }

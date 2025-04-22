@@ -16,6 +16,7 @@ import { JobsDescriptionOptionComponent } from './components/jobs/description/jo
 import { PruningComponent } from './components/jobs/description/pruning/pruning.component';
 import { IrrigationComponent } from './components/jobs/description/irrigation/irrigation.component';
 import { ProfitEstimateMainComponent } from './components/profit-estimate/profit-estimate-main/profit-estimate-main.component';
+import { AccessNotGrantedComponent } from './components/access-not-granted/access-not-granted.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProfitEstimateMainComponent } from './components/profit-estimate/profit
     PracticeComponent,
     PageNotFoundComponent,
     JobsDescriptionOptionComponent,
-    ProfitEstimateMainComponent
+    ProfitEstimateMainComponent,
+    AccessNotGrantedComponent
   ],
   imports: [
     BrowserModule,

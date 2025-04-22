@@ -7,6 +7,8 @@ import { PracticeComponent } from './practice/practice.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { JobsDescriptionOptionComponent } from './components/jobs/description/jobs-description-option/jobs-description-option.component';
 import { ProfitEstimateMainComponent } from './components/profit-estimate/profit-estimate-main/profit-estimate-main.component';
+import { authGuard } from './auth.guard';
+import { AccessNotGrantedComponent } from './components/access-not-granted/access-not-granted.component';
 
 const routes: Routes = [
   {
@@ -15,16 +17,18 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   { path: 'main', component: WelcomeMessagesComponent},
-  { path: 'profitEstimate', component: ProfitEstimateMainComponent, data: {title:'hy!!!!'}},
-  { path: 'profitEstimate/descriptions', component: ProfitEstimateComponent },
   { path: 'jobs',component: JobsComponent },
   { path: 'jobs/descriptions', component: JobsDescriptionOptionComponent },
-  { path: 'main/practice', component: PracticeComponent },
+  { path: 'profitEstimate', component: ProfitEstimateMainComponent, canActivate:[authGuard], data: {title:'hy!!!!'}},
+  { path: 'profitEstimate/descriptions', component: ProfitEstimateComponent },
+  { path: 'main/practice', component: PracticeComponent},
+  { path: 'main/accessNotGranted', component: AccessNotGrantedComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

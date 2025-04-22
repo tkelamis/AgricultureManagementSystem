@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { subscribe } from 'node:diagnostics_channel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RouteService {
-
   constructor(private router:Router, private activatedRoute: ActivatedRoute) { }
 
   urlHasJob():boolean{
@@ -30,8 +30,34 @@ export class RouteService {
     console.log(this.activatedRoute.url);
   }
 
-  navigateToProfit(){
-    this.router.navigate(['/profitEstimate'], { fragment: 'reviews' });
+  navigateTo(path: string){
+    this.router.navigate([`/${path}`]);
+  }
+
+  navigateToWithFragment(path: string){
+    this.router.navigate([`/${path}`], { fragment: 'reviews' });
+  }
+
+  loading(){
+    this.router.events.subscribe((event) =>{
+      if(event instanceof NavigationStart){
+        console.log('The navigation started here: ', event.id);
+      }
+
+      else if(event instanceof NavigationEnd){
+        console.log('The navigation ended here: ', event.id);
+        
+      }
+      else{
+      }
+    })
+  }
+
+  navigationError(){
+    this.router.events.subscribe((event)=>{
+      if(event instanceof NavigationError)
+      {console.log('Navigation is wrong')}
+    })
   }
 }
 

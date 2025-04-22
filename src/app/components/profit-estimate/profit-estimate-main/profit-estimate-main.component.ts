@@ -14,17 +14,18 @@ export class ProfitEstimateMainComponent implements OnInit {
 
   ngOnInit(){
 
-    this.activatedRoute.url.subscribe(url => {
-      console.log(url)
-    })
+    // this.activatedRoute.url.subscribe(url => {
+    //   console.log(url)
+    // })
 
-    this.activatedRoute.fragment.subscribe(fragment => {
-    console.log('Fragment is ', fragment);
-    })
+    // this.activatedRoute.fragment.subscribe(fragment => {
+    // console.log('Fragment is ', fragment);
+    // })
+
 }
 
 navigateToProfit(){
-  this.routerManager.navigateToProfit();
+  this.routerManager.navigateToWithFragment('profitEstimate');
 }
 
 }

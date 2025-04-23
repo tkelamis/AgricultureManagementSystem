@@ -28,17 +28,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  urlHasJob():boolean{
-    return this.routerManager.urlHasJob();
-  }
-
-  urlHasProfitEstimate():boolean{
-    return this.routerManager.urlHasProfitEstimate();
-  }
-
-  urlHasMain():boolean{
-    return this.routerManager.urlHasMain();
-  }
+  
 
   logRoute() {
     console.log('Navigating to:', this.router.url);

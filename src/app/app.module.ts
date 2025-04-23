@@ -9,7 +9,7 @@ import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { JobsComponent } from './components/jobs/jobs.component';
-import { PracticeComponent } from './practice/practice.component';
+import { PracticeComponent } from './components/practice/practice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { JobsDescriptionOptionComponent } from './components/jobs/description/jobs-description-option/jobs-description-option.component';
@@ -19,6 +19,7 @@ import { ProfitEstimateMainComponent } from './components/profit-estimate/profit
 import { AccessNotGrantedComponent } from './components/access-not-granted/access-not-granted.component';
 import { AddJobComponent } from './components/jobs/add-job/add-job.component';
 import { SaveChangesModalComponent } from './components/modals/save-changes-modal/save-changes-modal.component';
+import { LeftMenuOptionsComponent } from './components/left-menu-options/left-menu-options.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SaveChangesModalComponent } from './components/modals/save-changes-moda
     ProfitEstimateMainComponent,
     AccessNotGrantedComponent,
     AddJobComponent,
-    SaveChangesModalComponent
+    SaveChangesModalComponent,
+    LeftMenuOptionsComponent
   ],
   imports: [
     BrowserModule,

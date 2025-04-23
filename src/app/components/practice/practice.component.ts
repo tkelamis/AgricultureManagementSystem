@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FarmService } from '../services/farm.service';
 import { BehaviorSubject } from 'rxjs';
-import { DueDate, Farm } from '../objects/farm';
-import { RouteService } from '../services/route.service';
+import { DueDate, Farm } from '../../objects/farm';
+import { RouteService } from '../../services/route.service';
 
 @Component({
   selector: 'app-practice',

@@ -20,6 +20,7 @@ import { AccessNotGrantedComponent } from './components/access-not-granted/acces
 import { AddJobComponent } from './components/jobs/add-job/add-job.component';
 import { SaveChangesModalComponent } from './components/modals/save-changes-modal/save-changes-modal.component';
 import { LeftMenuOptionsComponent } from './components/left-menu-options/left-menu-options.component';
+import { JobsModule } from './jobs/jobs.module';
 
 @NgModule({
   declarations: [
@@ -27,15 +28,10 @@ import { LeftMenuOptionsComponent } from './components/left-menu-options/left-me
     OptionHoverHighlightDirective,
     ProfitEstimateComponent,
     WelcomeMessagesComponent,
-    JobsComponent,
-    PruningComponent,
-    IrrigationComponent,
     PracticeComponent,
     PageNotFoundComponent,
-    JobsDescriptionOptionComponent,
     ProfitEstimateMainComponent,
     AccessNotGrantedComponent,
-    AddJobComponent,
     SaveChangesModalComponent,
     LeftMenuOptionsComponent
   ],
@@ -44,7 +40,8 @@ import { LeftMenuOptionsComponent } from './components/left-menu-options/left-me
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    JobsModule 
   ],
   providers: [
     provideClientHydration(withEventReplay())

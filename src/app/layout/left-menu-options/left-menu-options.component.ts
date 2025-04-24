@@ -15,16 +15,15 @@ export class LeftMenuOptionsComponent {
 
   constructor(private routerManager: RouteService){}
   
-  urlHasJob():boolean{
-    return this.routerManager.urlHasJob();
+  urlHasJobs():boolean{
+    return this.routerManager.urlHasJobs();
   }
 
-  urlHasProfitEstimate():boolean{
-    return this.routerManager.urlHasProfitEstimate();
+  urlHasFinancial():boolean{
+    return this.routerManager.urlHasFinancial();
   }
 
   urlHasMain():boolean{
     return this.routerManager.urlHasMain();
   }
-
 }

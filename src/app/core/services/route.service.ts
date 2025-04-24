@@ -8,12 +8,12 @@ import { subscribe } from 'node:diagnostics_channel';
 export class RouteService {
   constructor(private router:Router, private activatedRoute: ActivatedRoute) { }
 
-  urlHasJob():boolean{
+  urlHasJobs():boolean{
     return this.router.url.includes('jobs');
   }
 
-  urlHasProfitEstimate():boolean{
-    return this.router.url.includes('profitEstimate');
+  urlHasFinancial():boolean{
+    return this.router.url.includes('financial');
   }
   
   urlHasMain():boolean{

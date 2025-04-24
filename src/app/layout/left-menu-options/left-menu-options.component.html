@@ -3,12 +3,12 @@
         <li appOptionHoverHighlight routerLink="" >Dashboard</li>
         <li appOptionHoverHighlight routerLink="main/**" routerLinkActive="active">Χτήματα</li>
         <li appOptionHoverHighlight routerLink="jobs" >Δουλειές   &gt;</li>
-        <li appOptionHoverHighlight routerLink="financial" aria-current="page">Οικονιμικά</li>
+        <li appOptionHoverHighlight routerLink="financial" aria-current="page">Οικονομικά</li>
         <li appOptionHoverHighlight routerLink="main/practice" routerLinkActive="active">Εξάσκηση</li>
     </ul>
 </ng-container>
 
-<ng-container *ngIf="urlHasJob()">
+<ng-container *ngIf="urlHasJobs()">
     <ul [@slideInLeft] class="app-left-options-list">
         <li appOptionHoverHighlight class="bold" routerLink="" >&lt; Κλείσιμο</li>
         <li appOptionHoverHighlight routerLink="jobs/descriptions">Περιγραφή</li>
@@ -17,9 +17,9 @@
     </ul>
 </ng-container>
 
-<ng-container *ngIf="urlHasProfitEstimate()">
+<ng-container *ngIf="urlHasFinancial()">
     <ul [@slideInLeft] class="app-left-options-list">
         <li appOptionHoverHighlight class="bold" routerLink="">&lt; Κλείσιμο</li>
-        <li appOptionHoverHighlight routerLink="profitEstimate/descriptions">Περιγραφή</li>
+        <li appOptionHoverHighlight routerLink="financial/profitEstimation">Εκτίμηση Κέρδους</li>
     </ul>
 </ng-container>

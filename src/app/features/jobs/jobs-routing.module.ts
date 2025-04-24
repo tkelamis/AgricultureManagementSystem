@@ -1,6 +1,5 @@
 import { JobsMainComponent } from './components/jobs-main/jobs-main.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { JobsDescriptionOptionComponent } from './components/jobs-description-option/jobs-description-option.component';
 import { returnWithoutSaveGuard } from '../../core/guards/return-without-save.guard';

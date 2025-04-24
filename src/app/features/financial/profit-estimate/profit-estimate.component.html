@@ -1,0 +1,32 @@
+
+
+<div [@fadeIn] class="choose-farm-container">
+
+        <div class="filter-section">
+                <div class="options">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" (change)="showEarly = !showEarly"/>
+                        Δείξε τα πρώιμα
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" (change)="showLate = !showLate"/>
+                        Δείξε τα όψιμα
+                        
+                    </label>
+                </div>
+                
+                <label class="farm-label">
+                    Διάλεξε χτήμα:
+                    <select class="farm-dropdown"  [(ngModel)]="farm">
+                        <ng-container *ngFor="let f of farms">
+                            <ng-container *ngIf="(!showEarly && !showLate)||
+                                                (showEarly && f.periodOfCropping == 'Early') ||
+                                                (showLate && f.periodOfCropping == 'In Time')">
+                                <option [ngValue]="f">{{f.name}}</option>
+                            </ng-container>
+                        </ng-container>
+                    </select>
+                </label>
+                
+        </div>
+    </div>

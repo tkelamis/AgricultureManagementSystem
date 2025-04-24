@@ -1,38 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app/app.component';
-import { OptionHoverHighlightDirective } from './directives/option-hover-highlight/option-hover-highlight.directive';
-import { ProfitEstimateComponent } from './components/profit-estimate/profit-estimate.component';
-import { WelcomeMessagesComponent } from './components/welcome-messages/welcome-messages.component';
+import { MainComponent } from './layout/main/main.component';
+import { OptionHoverHighlightDirective } from './shared/directives/option-hover-highlight.directive';
+import { WelcomeMessagesComponent } from './features/dashboard/components/welcome-messages/welcome-messages.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { JobsComponent } from './components/jobs/jobs.component';
-import { PracticeComponent } from './components/practice/practice.component';
+import { PracticeComponent } from './features/practice/practice/practice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { JobsDescriptionOptionComponent } from './components/jobs/description/jobs-description-option/jobs-description-option.component';
-import { PruningComponent } from './components/jobs/description/pruning/pruning.component';
-import { IrrigationComponent } from './components/jobs/description/irrigation/irrigation.component';
-import { ProfitEstimateMainComponent } from './components/profit-estimate/profit-estimate-main/profit-estimate-main.component';
-import { AccessNotGrantedComponent } from './components/access-not-granted/access-not-granted.component';
-import { AddJobComponent } from './components/jobs/add-job/add-job.component';
-import { SaveChangesModalComponent } from './components/modals/save-changes-modal/save-changes-modal.component';
-import { LeftMenuOptionsComponent } from './components/left-menu-options/left-menu-options.component';
-import { JobsModule } from './jobs/jobs.module';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { AccessNotGrantedComponent } from './shared/components/access-not-granted/access-not-granted.component';
+import { LeftMenuOptionsComponent } from './layout/left-menu-options/left-menu-options.component';
+import { JobsModule } from './features/jobs/jobs.module';
+import { ProfitEstimateComponent } from './features/financial/profit-estimate/profit-estimate.component';
+import { DashboardModule } from './features/dashboard/dashboard.module';
+import { FarmsModule } from './features/farms/farms.module';
+import { FinancialModule } from './features/financial/financial.module';
+import { PracticeModule } from './features/practice/practice.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    MainComponent,
     OptionHoverHighlightDirective,
-    ProfitEstimateComponent,
-    WelcomeMessagesComponent,
-    PracticeComponent,
     PageNotFoundComponent,
-    ProfitEstimateMainComponent,
     AccessNotGrantedComponent,
-    SaveChangesModalComponent,
     LeftMenuOptionsComponent
   ],
   imports: [
@@ -41,11 +32,15 @@ import { JobsModule } from './jobs/jobs.module';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    JobsModule 
+    JobsModule ,
+    DashboardModule,
+    FarmsModule,
+    FinancialModule,
+    PracticeModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [MainComponent]
 })
 export class AppModule { }

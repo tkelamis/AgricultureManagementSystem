@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { AccessNotGrantedComponent } from './shared/components/access-not-granted/access-not-granted.component';
-import { AddJobComponent } from './features/jobs/components/add-job/add-job.component';
 
 const routes: Routes = [
   {
@@ -22,7 +21,6 @@ const routes: Routes = [
   { path: 'practice',
     loadChildren: () => import('./features/practice/practice.module').then(p => p.PracticeModule)
   },
-  { path: 'main/practice', component: AddJobComponent},
   { path: 'main/accessNotGranted', component: AccessNotGrantedComponent},
   { path: '**', component: PageNotFoundComponent }
 ];

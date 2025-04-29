@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { fadeIn } from '../../shared/animations/fadeIn';
 import { slideInLeft } from '../../shared/animations/slideFromLeft';
 import { slideInRight } from '../../shared/animations/slideFromRight';
-import { RouteService } from '../../core/services/route.service';
+
 import { Router } from '@angular/router';
+import { RouteService } from '../../core/services/route.service';
 
 @Component({
   selector: 'app-root',

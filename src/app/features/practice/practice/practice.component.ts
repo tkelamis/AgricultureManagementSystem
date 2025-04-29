@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { DueDate, Farm } from '../../../core/models/farm';
 import { RouteService } from '../../../core/services/route.service';

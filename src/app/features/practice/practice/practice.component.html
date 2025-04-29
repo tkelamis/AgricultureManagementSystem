@@ -36,5 +36,16 @@
     {{property.key}}:{{property.value}}
 </div> -->
 
-<button>practice-outlet</button>
-<router-outlet name="practice-outlet"></router-outlet>
+@defer {<app-practice-child></app-practice-child>}
+
+<!-- @placeholder (minimum 5s) {
+    <b>Stuff will be loaded here.....</b>
+} -->
+
+@loading (minimum 7s) {
+    <b>Loading...</b>
+}
+
+@error {
+    <p>Ouch, that hurts</p>
+}

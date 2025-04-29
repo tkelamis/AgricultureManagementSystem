@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
-import { subscribe } from 'node:diagnostics_channel';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +16,7 @@ export class RouteService {
   }
   
   urlHasMain():boolean{
-    return this.router.url.includes('main');
+    return this.router.url.includes('main')|| this.router.url.includes('practice');;
   }
 
   showRouterState(){
@@ -60,5 +59,3 @@ export class RouteService {
     })
   }
 }
-
-

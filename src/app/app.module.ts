@@ -12,11 +12,11 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
 import { AccessNotGrantedComponent } from './shared/components/access-not-granted/access-not-granted.component';
 import { LeftMenuOptionsComponent } from './layout/left-menu-options/left-menu-options.component';
 import { JobsModule } from './features/jobs/jobs.module';
-import { ProfitEstimateComponent } from './features/financial/profit-estimate/profit-estimate.component';
 import { DashboardModule } from './features/dashboard/dashboard.module';
 import { FarmsModule } from './features/farms/farms.module';
 import { FinancialModule } from './features/financial/financial.module';
 import { PracticeModule } from './features/practice/practice.module';
+import { PracticeChildComponent } from './features/practice/practice-child/practice-child.component';
 
 @NgModule({
   declarations: [
